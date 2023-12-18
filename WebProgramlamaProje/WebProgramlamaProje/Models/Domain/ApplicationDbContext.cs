@@ -10,6 +10,23 @@ namespace WebProgramlamaProje.Models.Domain
 		{
 
 		}
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+			foreach (var entityType in builder.Model.GetEntityTypes())
+			{
+				entityType.SetTableName(entityType.DisplayName());
+				entityType.GetForeignKeys().Where(fk => !fk.IsOwnership && fk.DeleteBehavior == DeleteBehavior.Cascade).ToList().ForEach(fk=>fk.DeleteBehavior = DeleteBehavior.NoAction);
+			}
+        }
+
+        public DbSet<Flight> Flight { get; set; }
+		public DbSet<Ticket> Ticket { get; set; }
+		public DbSet<TicketType> TicketType { get; set; }
+		public DbSet<TicketTypeProperty> TicketTypeProperty { get; set; }
+
+		
 	}
 }
 
