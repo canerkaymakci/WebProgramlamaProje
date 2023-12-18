@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0LUcIBD2kKCI3AuLyCnou7/cspLvmT1fr0Obi30HGgpLjfG3HUeewqVshp3tkWpkUaXVWy6a6sbB28RMWBtZng==",
+  "dgSpecHash": "SrCs/x94GHskr87LdZjgnm4RW1FnWy3w29RE7DVsvCzQPzw/LruZ4l/rLHPFhwNlf5S+67e4GdeKz7Q5Ikk3hg==",
   "success": true,
-  "projectFilePath": "/Users/canerkaymakci/Coding/CSharp/WebProgramlama/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje.csproj",
+  "projectFilePath": "/Users/canerkaymakci/Documents/GitHub/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje.csproj",
   "expectedPackageFiles": [
     "/Users/canerkaymakci/.nuget/packages/entityframework/6.4.4/entityframework.6.4.4.nupkg.sha512",
     "/Users/canerkaymakci/.nuget/packages/humanizer/2.14.1/humanizer.2.14.1.nupkg.sha512",

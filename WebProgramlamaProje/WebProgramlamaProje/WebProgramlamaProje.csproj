@@ -9,10 +9,20 @@
   <ItemGroup>
     <None Remove="Models\Domain\" />
     <None Remove="Models\Dto\" />
+    <None Remove="Repository\" />
+    <None Remove="Repository\Abstract\" />
+    <None Remove="Repository\Implementation\" />
+    <None Remove="Views\UserAuthentication\" />
+    <None Remove="Views\Dashboard\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\Domain\" />
     <Folder Include="Models\Dto\" />
+    <Folder Include="Repository\" />
+    <Folder Include="Repository\Abstract\" />
+    <Folder Include="Repository\Implementation\" />
+    <Folder Include="Views\UserAuthentication\" />
+    <Folder Include="Views\Dashboard\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.4.4" />

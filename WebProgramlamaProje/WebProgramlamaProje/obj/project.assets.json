@@ -11304,11 +11304,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/canerkaymakci/Coding/CSharp/WebProgramlama/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje.csproj",
+      "projectUniqueName": "/Users/canerkaymakci/Documents/GitHub/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje.csproj",
       "projectName": "WebProgramlamaProje",
-      "projectPath": "/Users/canerkaymakci/Coding/CSharp/WebProgramlama/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje.csproj",
+      "projectPath": "/Users/canerkaymakci/Documents/GitHub/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje.csproj",
       "packagesPath": "/Users/canerkaymakci/.nuget/packages/",
-      "outputPath": "/Users/canerkaymakci/Coding/CSharp/WebProgramlama/WebProgramlamaProje/WebProgramlamaProje/obj/",
+      "outputPath": "/Users/canerkaymakci/Documents/GitHub/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/canerkaymakci/.nuget/NuGet/NuGet.Config"
