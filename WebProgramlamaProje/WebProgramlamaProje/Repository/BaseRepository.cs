@@ -30,7 +30,7 @@ namespace WebProgramlamaProje.Repository
             return entity;
         }
 
-        public async Task<List<TEntity>> GetAllAsync(TEntity entity)
+        public async Task<List<TEntity>> GetAllAsync()
         {
             return await _context.Set<TEntity>().ToListAsync();
         }

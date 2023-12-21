@@ -17,9 +17,10 @@
                 <li><a href="/Dashboard/Display">Dashboard</a></li>
                 <li><a href="/Flight/Display">Flight</a></li>
 
-                @if (User.IsInRole("admin"))
+                @if (User.IsInRole("Admin"))
                 {
-                    <li><a href="/Admin/Display">Admin Page</a></li>
+                    <li><a href="/Admin/Index">Admin Page</a></li>
+                    <li><a href="/Admin/CreateFlight">Uçuş Tanımla</a></li>
                 }
                 @if (!string.IsNullOrEmpty(User.Identity.Name))
                 {

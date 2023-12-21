@@ -16,6 +16,7 @@ public class Program
         builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
         builder.Services.ConfigureApplicationCookie(options => options.LoginPath = "/UserAuthentication/Login");
         builder.Services.AddTransient<IUserAuthenticationService, UserAuthenticationService>();
+        builder.Services.AddTransient<IFlightService, FlightService>();
 
         // Add services to the container.
         builder.Services.AddControllersWithViews();

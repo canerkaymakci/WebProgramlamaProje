@@ -1,0 +1,32 @@
+﻿@model List<WebProgramlamaProje.Models.Domain.Flight>
+
+<div class="container mt-5">
+    <h2>Flight List</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Actions</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Total Seat Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var flight in Model)
+            {
+                <tr>
+                    <td>
+                        <a class="btn btn-info" asp-controller="Admin" asp-action="FlightDetails" asp-route-id="@flight.Id">Detayları Göster</a>
+                    </td>
+                    <td>@flight.From</td>
+                    <td>@flight.To</td>
+                    <td>@flight.Date.ToShortDateString()</td>
+                    <td>@flight.Description</td>
+                    <td>@flight.TotalSeatCount</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

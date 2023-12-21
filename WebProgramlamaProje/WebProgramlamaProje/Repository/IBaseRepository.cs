@@ -8,7 +8,7 @@ namespace WebProgramlamaProje.Repository
         Task<TEntity> UpdateAsync(TEntity entity);
         Task<TEntity> CreateAsync(TEntity entity);
         Task<TEntity> DeleteAsync(Guid Id);
-        Task<List<TEntity>> GetAllAsync(TEntity entity);
+        Task<List<TEntity>> GetAllAsync();
         Task<TEntity> GetByIdAsync(Guid Id);
 
     }

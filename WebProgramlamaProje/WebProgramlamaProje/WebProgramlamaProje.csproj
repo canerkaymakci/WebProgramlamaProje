@@ -14,6 +14,8 @@
     <None Remove="Repository\Implementation\" />
     <None Remove="Views\UserAuthentication\" />
     <None Remove="Views\Dashboard\" />
+    <None Remove="Views\Admin\" />
+    <None Remove="Models\Dto\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\Domain\" />
@@ -23,6 +25,8 @@
     <Folder Include="Repository\Implementation\" />
     <Folder Include="Views\UserAuthentication\" />
     <Folder Include="Views\Dashboard\" />
+    <Folder Include="Views\Admin\" />
+    <Folder Include="Models\Dto\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.4.4" />

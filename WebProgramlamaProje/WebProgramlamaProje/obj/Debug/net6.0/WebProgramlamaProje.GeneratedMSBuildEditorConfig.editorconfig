@@ -16,6 +16,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/canerkaymakci/Documents/GitHub/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/canerkaymakci/Documents/GitHub/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje/Views/Admin/AddTicketType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQWRkVGlja2V0VHlwZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/canerkaymakci/Documents/GitHub/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje/Views/Admin/CreateFlight.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQ3JlYXRlRmxpZ2h0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/canerkaymakci/Documents/GitHub/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje/Views/Admin/FlightDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vRmxpZ2h0RGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/canerkaymakci/Documents/GitHub/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/canerkaymakci/Documents/GitHub/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGFzaGJvYXJkL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
