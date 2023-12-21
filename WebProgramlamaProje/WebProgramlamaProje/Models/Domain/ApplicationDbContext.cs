@@ -16,7 +16,7 @@ namespace WebProgramlamaProje.Models.Domain
             base.OnModelCreating(builder);
 			foreach (var entityType in builder.Model.GetEntityTypes())
 			{
-				entityType.SetTableName(entityType.DisplayName());
+				//entityType.SetTableName(entityType.DisplayName());
 				entityType.GetForeignKeys().Where(fk => !fk.IsOwnership && fk.DeleteBehavior == DeleteBehavior.Cascade).ToList().ForEach(fk=>fk.DeleteBehavior = DeleteBehavior.NoAction);
 			}
         }

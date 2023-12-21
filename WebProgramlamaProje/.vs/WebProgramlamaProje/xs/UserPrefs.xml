@@ -1,48 +1,21 @@
 ﻿<Properties StartupConfiguration="{09A5CCD7-69F9-4A43-BF59-BE08DE3D08AA}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="WebProgramlamaProje/Views/Dashboard/Index.cshtml">
+  <MonoDevelop.Ide.ItemProperties.WebProgramlamaProje PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebProgramlamaProje/Repository/BaseRepository.cs">
     <Files>
-      <File FileName="WebProgramlamaProje/Models/Dto/RegistrationDto.cs" Line="18" Column="11" IsPinned="True" />
-      <File FileName="WebProgramlamaProje/Models/Dto/LoginDto.cs" Line="10" Column="41" IsPinned="True" />
-      <File FileName="WebProgramlamaProje/Program.cs" Line="17" Column="86" />
-      <File FileName="WebProgramlamaProje/Models/Domain/ApplicationDbContext.cs" Line="3" Column="37" />
-      <File FileName="WebProgramlamaProje/Models/Domain/ApplicationUser.cs" Line="13" Column="1" />
-      <File FileName="WebProgramlamaProje/Controllers/HomeController.cs" Line="1" Column="1" />
-      <File FileName="WebProgramlamaProje/Repository/Abstract/IUserAuthenticationService.cs" Line="13" Column="1" />
-      <File FileName="WebProgramlamaProje/Models/Dto/StatusDto.cs" Line="5" Column="3" />
-      <File FileName="WebProgramlamaProje/Repository/Implementation/UserAuthenticationService.cs" Line="79" Column="32" />
-      <File FileName="WebProgramlamaProje/Controllers/UserAuthenticationController.cs" Line="83" Column="52" />
-      <File FileName="WebProgramlamaProje/Views/UserAuthentication/Login.cshtml" Line="64" Column="72" />
-      <File FileName="WebProgramlamaProje/Views/UserAuthentication/Registration.cshtml" Line="28" Column="81" />
-      <File FileName="WebProgramlamaProje/Views/Shared/_Layout.cshtml" Line="27" Column="40" />
-      <File FileName="WebProgramlamaProje/Views/Dashboard/Index.cshtml" Line="1" Column="42" />
-      <File FileName="WebProgramlamaProje/Controllers/DashboardController.cs" Line="18" Column="27" />
+      <File FileName="WebProgramlamaProje/Repository/IBaseRepository.cs" Line="17" Column="1" />
+      <File FileName="WebProgramlamaProje/Repository/BaseRepository.cs" Line="49" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="WebProgramlamaProje" expanded="True">
             <Node name="WebProgramlamaProje" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True" />
-              </Node>
-              <Node name="Controllers" expanded="True" />
+              <Node name="Dependencies" expanded="True" />
               <Node name="Models" expanded="True">
                 <Node name="Domain" expanded="True" />
-                <Node name="Dto" expanded="True" />
               </Node>
               <Node name="Repository" expanded="True">
-                <Node name="Abstract" expanded="True" />
-                <Node name="Implementation" expanded="True" />
-              </Node>
-              <Node name="Views" expanded="True">
-                <Node name="Dashboard" expanded="True">
-                  <Node name="Index.cshtml" selected="True" />
-                </Node>
-                <Node name="Shared" expanded="True" />
-                <Node name="UserAuthentication" expanded="True" />
+                <Node name="BaseRepository.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -52,6 +25,8 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.WebProgramlamaProje PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
 </Properties>

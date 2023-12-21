@@ -15,10 +15,11 @@ public class Program
         builder.Services.AddDbContext<ApplicationDbContext>(options => { options.UseSqlServer(connectionString); });
         builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
         builder.Services.ConfigureApplicationCookie(options => options.LoginPath = "/UserAuthentication/Login");
-        builder.Services.AddScoped<IUserAuthenticationService, UserAuthenticationService>();
+        builder.Services.AddTransient<IUserAuthenticationService, UserAuthenticationService>();
 
         // Add services to the container.
         builder.Services.AddControllersWithViews();
+        //SeedData.Initialize(connectionString);
 
         var app = builder.Build();
 
@@ -38,6 +39,13 @@ public class Program
         app.UseAuthentication();
 
         app.UseAuthorization();
+
+        using(var scope = app.Services.CreateScope())
+        {
+            var services = scope.ServiceProvider;
+            SeedData.Initialize(services).Wait();
+        }
+        
 
         app.MapControllerRoute(
             name: "default",
