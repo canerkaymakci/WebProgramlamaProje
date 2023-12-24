@@ -78,6 +78,24 @@ namespace WebProgramlamaProje.Controllers
             await _ticketTypeService.DeleteAsync(Id);
             return RedirectToAction(nameof(FlightDetails), new { Id = result.FlightId });
         }
+
+        public async Task<IActionResult> UpdateTicketType(Guid Id)
+        {
+
+            var result = await _ticketTypeService.GetByIdAsync(Id);
+
+            return View(result);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateTicketType(TicketType model)
+        {
+
+            var result = await _ticketTypeService.UpdateAsync(model);
+            return RedirectToAction(nameof(FlightDetails), new { Id = model.FlightId });
+        }
+
+
     }
 }
 

@@ -14,7 +14,7 @@
             </div>
             <ul class="nav navbar-nav">
                 <li><a href="#">Home</a></li>
-                <li><a href="/Dashboard/Display">Dashboard</a></li>
+                <li><a href="/Dashboard/Index">Dashboard</a></li>
                 <li><a href="/Flight/Display">Flight</a></li>
 
                 @if (User.IsInRole("Admin"))
@@ -31,7 +31,7 @@
         </div>
     </nav>
     <div class="container">
-            @RenderBody()
+        @RenderBody()
     </div>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

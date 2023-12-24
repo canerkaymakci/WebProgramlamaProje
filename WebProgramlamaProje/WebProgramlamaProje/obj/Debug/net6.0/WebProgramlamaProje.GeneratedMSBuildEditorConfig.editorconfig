@@ -32,8 +32,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/canerkaymakci/Documents/GitHub/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje/Views/Admin/UpdateTicketType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vVXBkYXRlVGlja2V0VHlwZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/canerkaymakci/Documents/GitHub/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGFzaGJvYXJkL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/canerkaymakci/Documents/GitHub/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje/Views/Dashboard/ReserveSeat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGFzaGJvYXJkL1Jlc2VydmVTZWF0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/canerkaymakci/Documents/GitHub/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje/Views/Home/Index.cshtml]

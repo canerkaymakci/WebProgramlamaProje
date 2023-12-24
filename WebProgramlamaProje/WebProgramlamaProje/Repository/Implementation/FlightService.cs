@@ -19,6 +19,11 @@ namespace WebProgramlamaProje.Repository.Implementation
             return await _applicationDbContext.Flight.Include(f => f.TicketTypes).FirstOrDefaultAsync(f => f.Id == Id);
         }
 
+        public async Task<Flight> GetFlightWithTicket(Guid Id)
+        {
+            return await _applicationDbContext.Flight.Include(f => f.Tickets).Include(f=>f.TicketTypes).FirstOrDefaultAsync(f => f.Id == Id);
+        }
+
     }
 }
 
