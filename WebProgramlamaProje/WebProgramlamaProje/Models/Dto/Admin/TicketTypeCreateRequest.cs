@@ -9,13 +9,12 @@ namespace WebProgramlamaProje.Models.Dto.Admin
 	{
         public TicketTypeCreateRequest()
         {
-            TicketTypeProperties = new List<TicketTypeProperty>();
+
         }
 
         public Guid FlightId { get; set; }
         [Required]
         public string? Name { get; set; }
-        public List<TicketTypeProperty>? TicketTypeProperties { get; set; }
         public List<Ticket>? Tickets { get; set; }
         [Required]
         public decimal Price { get; set; }

@@ -1,81 +1,36 @@
-﻿@model WebProgramlamaProje.Models.Dto.Admin.TicketTypeCreateRequest
+﻿@model WebProgramlamaProje.Models.Domain.TicketType
 
-
-    <label for="flightId">Flight ID:</label>
-    <input type="text" id="flightId" asp-for="FlightId"><br>
-
-    <label for="ticketName">Ticket Name:</label>
-    <input type="text" id="ticketName" asp-for="Name"><br>
-
-    <label for="ticketName">Ticket Name:</label>
-    <input type="number" id="ticketName" asp-for="Price" step="0.01"><br>
-
-    <label for="ticketName">Ticket Name:</label>
-    <input type="text" id="ticketName" asp-for="Currency"><br>
-
-    <div id="propertyFields">
-        <button type="button" id="addProperty">Add Property</button>
-        @for (var i = 0; i < Model.TicketTypeProperties.Count; i++)
-        {
-            <div>
-                <label asp-for="@Model.TicketTypeProperties[i].Property">Property @(i + 1):</label>
-                <input asp-for="@Model.TicketTypeProperties[i].Property">
-            </div>
-        }
+<form asp-action="AddTicketType" asp-controller="Admin" method="post">
+    <div class=" form-group">
+        <input type="hidden" id="FlightId" name="FlightId" value="@Model.FlightId" />
+        <input type="hidden" id="Id" name="Id" value="@Model.Id" />
     </div>
 
-    <input type="button" onclick="postData()" value="Submit">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label">Name:</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
 
+    <div class="form-group">
+        <label asp-for="Properties" class="control-label">Properties:</label>
+        <textarea asp-for="Properties" class="form-control" ></textarea>
+        <span asp-validation-for="Properties" class="text-danger"></span>
+    </div>
 
+    <div class="form-group">
+        <label asp-for="Price" class="control-label">Price:</label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
 
+    <div class="form-group">
+        <label asp-for="Currency" class="control-label">Currency:</label>
+        <input asp-for="Currency" class="form-control" />
+        <span asp-validation-for="Currency" class="text-danger"></span>
+    </div>
 
+    
 
-
-
-
-
-<script>document.addEventListener("DOMContentLoaded", () => {
-        document.getElementById("addProperty").addEventListener("click", () => {
-            const propertyFields = document.getElementById("propertyFields");
-            const newField = document.createElement("div");
-            const index = document.querySelectorAll("#propertyFields > div").length;
-
-            newField.innerHTML = `
-                <label asp-for="TicketTypeProperties[${index}].Property">Property ${index + 1}:</label>
-                <input type="text" asp-for="TicketTypeProperties[${index}].Property">`;
-            propertyFields.appendChild(newField);
-        });
-});
-
-    function postData() {
-        var data = {
-            FlightId: document.getElementById("flightId").value,
-            Name: document.getElementById("ticketName").value,
-            TicketTypeProperties: []
-        };
-
-        var propertyFields = document.querySelectorAll("#propertyFields input[type='text']");
-        propertyFields.forEach(function (field) {
-            data.TicketTypeProperties.push({ Property: field.value });
-        });
-        console.log(data);
-        
-        fetch('/Admin/AddTicketType', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-            .then(response => {
-                if (response.ok) {
-                    console.log('Veri başarıyla gönderildi!');
-                } else {
-                    console.error('Veri gönderilirken hata oluştu.');
-                }
-            })
-            .catch(error => {
-                console.error('İstek sırasında bir hata oluştu:', error);
-            });
-    }
-    </script>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

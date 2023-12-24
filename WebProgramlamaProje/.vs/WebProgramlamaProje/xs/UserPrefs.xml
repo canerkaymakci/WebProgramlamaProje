@@ -1,36 +1,32 @@
 ﻿<Properties StartupConfiguration="{09A5CCD7-69F9-4A43-BF59-BE08DE3D08AA}|Default">
-  <MonoDevelop.Ide.ItemProperties.WebProgramlamaProje PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/canerkaymakci/Documents/GitHub/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje/Controllers/AdminController.cs" relfile="WebProgramlamaProje/Controllers/AdminController.cs" line="35" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WebProgramlamaProje/Repository/Abstract/IFlightService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebProgramlamaProje/Controllers/AdminController.cs">
     <Files>
       <File FileName="WebProgramlamaProje/Controllers/DashboardController.cs" />
-      <File FileName="WebProgramlamaProje/Views/Dashboard/Index.cshtml" />
-      <File FileName="WebProgramlamaProje/Models/Domain/Flight.cs" />
-      <File FileName="WebProgramlamaProje/Models/Dto/Flight/FlightCreateRequest.cs" />
-      <File FileName="WebProgramlamaProje/SeedData.cs" Line="13" Column="35" />
-      <File FileName="WebProgramlamaProje/Program.cs" Line="16" Column="116" />
+      <File FileName="WebProgramlamaProje/Views/Dashboard/Index.cshtml" Line="1" Column="1" />
+      <File FileName="WebProgramlamaProje/Models/Domain/Flight.cs" Line="7" Column="2" />
+      <File FileName="WebProgramlamaProje/SeedData.cs" />
+      <File FileName="WebProgramlamaProje/Program.cs" Line="20" Column="1" />
       <File FileName="WebProgramlamaProje/Repository/Abstract/IFlightService.cs" Line="8" Column="6" />
-      <File FileName="WebProgramlamaProje/Views/Admin/Index.cshtml" Line="5" Column="1" />
-      <File FileName="WebProgramlamaProje/Models/BaseEntity.cs" Line="8" Column="37" />
+      <File FileName="WebProgramlamaProje/Views/Admin/Index.cshtml" Line="21" Column="124" />
+      <File FileName="WebProgramlamaProje/Models/BaseEntity.cs" Line="12" Column="1" />
       <File FileName="WebProgramlamaProje/Models/IBaseEntity.cs" Line="6" Column="31" />
-      <File FileName="WebProgramlamaProje/Repository/BaseRepository.cs" />
-      <File FileName="WebProgramlamaProje/appsettings.json" Line="9" Column="84" />
-      <File FileName="WebProgramlamaProje/Models/Domain/ApplicationDbContext.cs" Line="1" Column="1" />
-      <File FileName="WebProgramlamaProje/Models/AppDbContext.cs" Line="9" Column="84" />
-      <File FileName="WebProgramlamaProje/Views/Admin/CreateFlight.cshtml" Line="1" Column="1" />
-      <File FileName="WebProgramlamaProje/Views/Shared/_Layout.cshtml" Line="23" Column="67" />
+      <File FileName="WebProgramlamaProje/Repository/BaseRepository.cs" Line="33" Column="54" />
+      <File FileName="WebProgramlamaProje/Views/Admin/CreateFlight.cshtml" Line="47" Column="17" />
+      <File FileName="WebProgramlamaProje/Views/Shared/_Layout.cshtml" />
       <File FileName="WebProgramlamaProje/Repository/Abstract/ITicketService.cs" Line="1" Column="1" />
       <File FileName="WebProgramlamaProje/Repository/Abstract/ITicketTypeService.cs" Line="1" Column="1" />
-      <File FileName="WebProgramlamaProje/Repository/Implementation/FlightService.cs" Line="1" Column="1" />
+      <File FileName="WebProgramlamaProje/Repository/Implementation/FlightService.cs" Line="7" Column="94" />
       <File FileName="WebProgramlamaProje/Repository/Implementation/TicketService.cs" Line="1" Column="1" />
       <File FileName="WebProgramlamaProje/Repository/Implementation/TicketTypeService.cs" Line="1" Column="1" />
+      <File FileName="WebProgramlamaProje/Controllers/AdminController.cs" Line="68" Column="32" />
+      <File FileName="WebProgramlamaProje/Models/Domain/TicketType.cs" Line="7" Column="5" />
+      <File FileName="WebProgramlamaProje/Models/Domain/TicketTypeProperty.cs" Line="16" Column="1" />
+      <File FileName="WebProgramlamaProje/Repository/IBaseRepository.cs" Line="11" Column="41" />
+      <File FileName="WebProgramlamaProje/Views/Admin/FlightDetails.cshtml" Line="22" Column="1" />
+      <File FileName="WebProgramlamaProje/Views/Admin/AddTicketTypeModal.cshtml" Line="15" Column="1" />
+      <File FileName="WebProgramlamaProje/Models/Dto/Admin/TicketTypeCreateRequest.cs" Line="11" Column="1" />
+      <File FileName="WebProgramlamaProje/Models/Domain/Ticket.cs" Line="6" Column="5" />
+      <File FileName="WebProgramlamaProje/Models/Domain/ApplicationUser.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -38,14 +34,12 @@
           <Node name="WebProgramlamaProje" expanded="True">
             <Node name="WebProgramlamaProje" expanded="True">
               <Node name="Dependencies" expanded="True" />
+              <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True">
                 <Node name="Domain" expanded="True" />
-              </Node>
-              <Node name="Repository" expanded="True">
-                <Node name="Abstract" expanded="True">
-                  <Node name="IFlightService.cs" selected="True" />
+                <Node name="Dto" expanded="True">
+                  <Node name="Admin" expanded="True" />
                 </Node>
-                <Node name="Implementation" expanded="True" />
               </Node>
               <Node name="Views" expanded="True">
                 <Node name="Admin" expanded="True" />
@@ -58,4 +52,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.WebProgramlamaProje PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

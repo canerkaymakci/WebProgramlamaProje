@@ -1,7 +1,9 @@
 ﻿using System;
+using WebProgramlamaProje.Models.Domain;
+
 namespace WebProgramlamaProje.Repository.Abstract
 {
-	public interface ITicketTypeService
+	public interface ITicketTypeService: IBaseRepository<TicketType>
 	{
 	}
 }

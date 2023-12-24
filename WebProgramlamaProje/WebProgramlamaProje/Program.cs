@@ -17,6 +17,8 @@ public class Program
         builder.Services.ConfigureApplicationCookie(options => options.LoginPath = "/UserAuthentication/Login");
         builder.Services.AddTransient<IUserAuthenticationService, UserAuthenticationService>();
         builder.Services.AddTransient<IFlightService, FlightService>();
+        builder.Services.AddTransient<ITicketService, TicketService>();
+        builder.Services.AddTransient<ITicketTypeService, TicketTypeService>();
 
         // Add services to the container.
         builder.Services.AddControllersWithViews();

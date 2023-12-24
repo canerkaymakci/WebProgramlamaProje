@@ -24,7 +24,6 @@ namespace WebProgramlamaProje.Models.Domain
         public DbSet<Flight> Flight { get; set; }
 		public DbSet<Ticket> Ticket { get; set; }
 		public DbSet<TicketType> TicketType { get; set; }
-		public DbSet<TicketTypeProperty> TicketTypeProperty { get; set; }
 
 		
 	}

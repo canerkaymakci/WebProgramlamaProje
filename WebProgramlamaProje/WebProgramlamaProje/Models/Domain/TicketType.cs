@@ -9,7 +9,6 @@ namespace WebProgramlamaProje.Models.Domain
 	{
         public TicketType()
         {
-			TicketTypeProperties = new HashSet<TicketTypeProperty>();
 			Tickets = new HashSet<Ticket>();
         }
 
@@ -18,7 +17,7 @@ namespace WebProgramlamaProje.Models.Domain
         public Guid FlightId { get; set; }
 		[Required]
 		public string Name { get; set; }
-		public ICollection<TicketTypeProperty> TicketTypeProperties { get; set; }
+		public string Properties { get; set; }
 		public ICollection<Ticket> Tickets { get; set; }
 		[Required]
 		public decimal Price { get; set; }

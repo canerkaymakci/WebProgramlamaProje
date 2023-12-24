@@ -14,10 +14,12 @@ namespace WebProgramlamaProje.Controllers
     public class AdminController : Controller
     {
         private readonly IFlightService? _flightService;
+        private readonly ITicketTypeService? _ticketTypeService;
 
-        public AdminController(IFlightService? flightService)
+        public AdminController(IFlightService? flightService, ITicketTypeService? ticketTypeService)
         {
             _flightService = flightService;
+            _ticketTypeService = ticketTypeService;
         }
 
         // GET: /<controller>/
@@ -48,24 +50,33 @@ namespace WebProgramlamaProje.Controllers
 
         public async  Task<IActionResult> FlightDetails(Guid Id)
         {
-            var result = await _flightService.GetByIdAsync(Id);
+            var result = await _flightService.GetFlightWithTicketType(Id);
+            
 
             return View(result);
         }
 
         public async Task<IActionResult> AddTicketType(Guid Id)
         {
-            TicketTypeCreateRequest model = new TicketTypeCreateRequest() { FlightId = Id };
+            TicketType model = new TicketType() { FlightId = Id };
 
             return View(model);
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddTicketType(TicketTypeCreateRequest model)
+        public async Task<IActionResult> AddTicketType(TicketType model)
         {
-            
 
-            return View(model);
+            var result = await _ticketTypeService.CreateAsync(model);
+            return RedirectToAction(nameof(FlightDetails), new {Id = model.FlightId});
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteTicketType(Guid Id)
+        {
+            var result = await _ticketTypeService.GetByIdAsync(Id);
+            await _ticketTypeService.DeleteAsync(Id);
+            return RedirectToAction(nameof(FlightDetails), new { Id = result.FlightId });
         }
     }
 }

@@ -5,6 +5,8 @@ namespace WebProgramlamaProje.Repository.Abstract
 {
     public interface IFlightService : IBaseRepository<Flight>
     {
+        Task<Flight> GetFlightWithTicketType(Guid Id);
+
     }
 }
 
