@@ -6,11 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 using WebProgramlamaProje.Models.Domain;
 using WebProgramlamaProje.Repository.Abstract;
 using WebProgramlamaProje.Models.Dto.Admin;
+using Microsoft.AspNetCore.Authorization;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace WebProgramlamaProje.Controllers
 {
+    [Authorize(Roles ="Admin")]
     public class AdminController : Controller
     {
         private readonly IFlightService? _flightService;

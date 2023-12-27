@@ -13,8 +13,7 @@ namespace WebProgramlamaProje.Models.Domain
 		public int SeatNo { get; set; }
 		public Flight? Flight { get; set; }
 		public TicketType? TicketType { get; set; }
-	
-
+		public string UserName { get; set; }
 
 	}
 }

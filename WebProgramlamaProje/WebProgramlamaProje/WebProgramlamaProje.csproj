@@ -16,6 +16,9 @@
     <None Remove="Views\Dashboard\" />
     <None Remove="Views\Admin\" />
     <None Remove="Models\Dto\Admin\" />
+    <None Remove="Resources\Controllers\" />
+    <None Remove="Resources\Controllers\HomeController\" />
+    <None Remove="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\Domain\" />
@@ -27,6 +30,9 @@
     <Folder Include="Views\Dashboard\" />
     <Folder Include="Views\Admin\" />
     <Folder Include="Models\Dto\Admin\" />
+    <Folder Include="Resources\Controllers\" />
+    <Folder Include="Resources\Controllers\HomeController\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.4.4" />
@@ -37,5 +43,15 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+    <PackageReference Include="RestSharp" Version="110.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\Controllers\HomeController.en-US.Designer.cs">
+      <DependentUpon>BaseController.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Controllers\HomeController.tr-TR.Designer.cs">
+      <DependentUpon>BaseController.tr-TR.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

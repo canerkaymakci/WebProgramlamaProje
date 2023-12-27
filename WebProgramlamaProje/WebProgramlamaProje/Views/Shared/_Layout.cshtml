@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - WebProgramlamaProje</title>
+    <title>@ViewData["Title"] - Web Programlama Proje</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-default">
@@ -13,7 +14,7 @@
                 <a class="navbar-brand" href="#">Booking</a>
             </div>
             <ul class="nav navbar-nav">
-                <li><a href="#">Home</a></li>
+                <li><a href="/Home/Index">Home</a></li>
                 <li><a href="/Dashboard/Index">Dashboard</a></li>
                 <li><a href="/Flight/Display">Flight</a></li>
 
@@ -24,9 +25,32 @@
                 }
                 @if (!string.IsNullOrEmpty(User.Identity.Name))
                 {
-                    <li><a href="/UserAuthentication/ChangePassword">ChangePassword</a></li>
+                    <li><a href="/UserAuthentication/ChangePassword">Change Password</a></li>
                     <li><a href="/UserAuthentication/Logout">Logout</a></li>
                 }
+            </ul>
+
+            <!-- Move language selection to the right -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <!--<form asp-controller="Home" asp-action="ChangeCulture" method="post" class="navbar-form">
+        <div class="form-group">
+            <select name="culture" id="cultureSelect" class="form-control">
+                <option value="en-US">English</option>
+                <option value="tr-TR">Türkçe</option>-->
+                    <!-- Diğer dil seçenekleri -->
+                    <!--</select>
+        </div>
+        <button type="submit" class="btn btn-default">Change Language</button>
+    </form>-->
+                    <div class="form-group">
+                        <select name="culture" id="cultureSelect" class="form-control">
+                            <option value="tr-TR">Türkçe</option>
+                            <option value="en-US">English</option>
+                            <!-- Diğer dil seçenekleri -->
+                        </select>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
@@ -34,6 +58,48 @@
         @RenderBody()
     </div>
     @await RenderSectionAsync("Scripts", required: false)
+
+    <script src="~/js/site.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>window.onload = function () {
+            // Function to get the value of a specific cookie
+            function getCookieValue(cookieName) {
+                const name = cookieName + '=';
+                const decodedCookie = decodeURIComponent(document.cookie);
+                const cookieArray = decodedCookie.split(';');
+                for (let i = 0; i < cookieArray.length; i++) {
+                    let cookie = cookieArray[i];
+                    while (cookie.charAt(0) === ' ') {
+                        cookie = cookie.substring(1);
+                    }
+                    if (cookie.indexOf(name) === 0) {
+                        return cookie.substring(name.length, cookie.length);
+                    }
+                }
+                return 'tr-TR';
+            }
+
+            // Function to set the value of a select element based on a cookie value
+            function setSelectValueFromCookie(selectId, cookieName) {
+                const selectElement = document.getElementById(selectId);
+                if (selectElement) {
+                    const cookieValue = getCookieValue(cookieName);
+                    if (cookieValue) {
+                        selectElement.value = cookieValue;
+                    }
+                }
+            }
+
+            // Call the function with the ID of the select element and the name of the cookie
+            setSelectValueFromCookie('cultureSelect', 'SelectedCulture');
+        };
+                const langSelector = document.getElementById('cultureSelect')
+        langSelector.addEventListener('change', function () {
+                    debugger
+                    const selectedLanguage = langSelector.value;
+                    document.cookie = 'SelectedCulture=' + selectedLanguage
+                    location.reload();
+                })</script>
 </body>
 </html>
 

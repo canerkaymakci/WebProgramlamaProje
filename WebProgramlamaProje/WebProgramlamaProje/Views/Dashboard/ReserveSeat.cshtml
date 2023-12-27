@@ -84,7 +84,30 @@
     $(document).ready(function () {
         $('#submitButton').click(function () {
             var formData = $('#myForm').serialize();
-            console.log(formData);
+            //var data = new FormData(formData);
+            //console.log(data);
+            $.ajax({
+                type: 'post',
+                url: '@Url.Action("ReserveSeat","Dashboard")',
+                data: formData,
+                success: function (response) {
+                    console.log(response);
+                    if (response.status) {
+                        showNotification('success', "İşlem Başarılı");
+                        toastr.success("test");
+                        //setTimeout(location.reload(),10000)
+                    }
+                    else {
+                        showNotification('error', "İşlem Başarısız");
+                    }
+
+               
+                },
+                error: function (response) {
+                    console.log(response);
+                    showNotification('error', "İşlem Başarısız");
+                }
+            })
         })
     })
 </script>

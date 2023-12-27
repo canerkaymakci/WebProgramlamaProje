@@ -265,6 +265,10 @@ namespace WebProgramlamaProje.Migrations
                     b.Property<Guid>("TicketTypeId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("FlightId");

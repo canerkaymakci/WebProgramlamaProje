@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using System.Globalization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
+using WebProgramlamaProje.Extensions;
 using WebProgramlamaProje.Models.Domain;
 using WebProgramlamaProje.Repository.Abstract;
 using WebProgramlamaProje.Repository.Implementation;
@@ -19,12 +22,29 @@ public class Program
         builder.Services.AddTransient<IFlightService, FlightService>();
         builder.Services.AddTransient<ITicketService, TicketService>();
         builder.Services.AddTransient<ITicketTypeService, TicketTypeService>();
+        builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+        builder.Services.AddHttpContextAccessor();
+        builder.Services.Configure<RequestLocalizationOptions>(options =>
+        {
+            options.DefaultRequestCulture = new("tr-TR");
+            CultureInfo[] cultures = new CultureInfo[] { new("tr-TR"), new("en-US") };
+            options.SupportedCultures = cultures;
+            options.SupportedUICultures = cultures;
+        });
+        builder.Services.AddScoped<RequestLocalizationCookiesMiddleware>();
+
+
 
         // Add services to the container.
-        builder.Services.AddControllersWithViews();
+        builder.Services.AddControllersWithViews()
+            .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+            .AddDataAnnotationsLocalization();
         //SeedData.Initialize(connectionString);
 
         var app = builder.Build();
+
+        
+
 
         // Configure the HTTP request pipeline.
         if (!app.Environment.IsDevelopment())
@@ -42,8 +62,10 @@ public class Program
         app.UseAuthentication();
 
         app.UseAuthorization();
+        app.UseRequestLocalization();
+        app.UseMiddleware<RequestLocalizationCookiesMiddleware>();
 
-        using(var scope = app.Services.CreateScope())
+        using (var scope = app.Services.CreateScope())
         {
             var services = scope.ServiceProvider;
             SeedData.Initialize(services).Wait();

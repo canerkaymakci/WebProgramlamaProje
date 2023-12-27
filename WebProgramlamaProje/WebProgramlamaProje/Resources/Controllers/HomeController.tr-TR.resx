@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="welcomeMessage" xml:space="preserve">
+    <value>Hoş geldiniz!</value>
+  </data>
+  <data name="buttonText" xml:space="preserve">
+    <value>Tamam</value>
+  </data>
+</root>
