@@ -26,14 +26,14 @@ public static class SeedData
 
         var adminUser = new ApplicationUser
             {
-                Name = "admin",
+                Name = "B191210095",
                 SecurityStamp = Guid.NewGuid().ToString(),
-                UserName = "admin",
-                Email = "admin@gmail.com",
+                UserName = "b191210095@sakarya.edu.tr",
+                Email = "b191210095@sakarya.edu.tr",
                 EmailConfirmed = true,
              };
 
-        string adminPassword = "Admin@123";
+        string adminPassword = "sau";
 
         var user = await userManager.FindByEmailAsync(adminUser.Email);
 

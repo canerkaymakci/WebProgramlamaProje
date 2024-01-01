@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 using WebProgramlamaProje.Models.Dto;
 using WebProgramlamaProje.Repository.Abstract;
 
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace WebProgramlamaProje.Controllers
 {
@@ -20,7 +19,6 @@ namespace WebProgramlamaProje.Controllers
             _userAuthenticationService = userAuthenticationService;
         }
 
-        // GET: /<controller>/
         public IActionResult Login()
         {
             return View();

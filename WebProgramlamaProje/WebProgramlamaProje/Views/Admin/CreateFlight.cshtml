@@ -1,51 +1,49 @@
 ﻿@model WebProgramlamaProje.Models.Domain.Flight;
 
+@inject IStringLocalizer<AdminController> Localizer
+@inject IHttpContextAccessor HttpContextAccessor
+@using Microsoft.AspNetCore.Localization
+
+@{
+
+
+    var currentCulture = HttpContextAccessor.HttpContext?.Features.Get<IRequestCultureFeature>()?.RequestCulture?.Culture;
+}
+
 <div class="container mt-5">
-    <h2>Flight Information</h2>
+    <h2>@Localizer["flightInfo"]</h2>
     <form asp-action="CreateFlight" method="post">
 
         <div class="form-group">
-            <label for="From">From</label>
+            <label for="From">@Localizer["flightFrom"]</label>
             <input asp-for="From" class="form-control" />
             <span asp-validation-for="From" class="text-danger"></span>
         </div>
 
         <div class="form-group">
-            <label for="To">To</label>
+            <label for="To">@Localizer["flightTo"]</label>
             <input asp-for="To" class="form-control" />
             <span asp-validation-for="To" class="text-danger"></span>
         </div>
 
         <div class="form-group">
-            <label for="Date">Date</label>
-            <input asp-for="Date" type="date" class="form-control" />
+            <label for="Date">@Localizer["flightDate"]</label>
+            <input asp-for="Date" type="datetime-local" class="form-control" />
             <span asp-validation-for="Date" class="text-danger"></span>
         </div>
 
         <div class="form-group">
-            <label for="Description">Description</label>
+            <label for="Description">@Localizer["flightDescription"]</label>
             <textarea asp-for="Description" class="form-control"></textarea>
             <span asp-validation-for="Description" class="text-danger"></span>
         </div>
 
         <div class="form-group">
-            <label for="TotalSeatCount">Total Seat Count</label>
+            <label for="TotalSeatCount">@Localizer["flightTotalSeat"]</label>
             <input asp-for="TotalSeatCount" type="number" class="form-control" />
             <span asp-validation-for="TotalSeatCount" class="text-danger"></span>
         </div>
 
-        @*<div class="form-group">
-            <label for="Tickets">Tickets</label>
-            <input asp-for="Tickets" class="form-control" />
-            <span asp-validation-for="Tickets" class="text-danger"></span>
-        </div>
-
-        <div class="form-group">
-            <label for="TicketTypes">Ticket Types</label>
-            <input asp-for="TicketTypes" class="form-control" />
-            <span asp-validation-for="TicketTypes" class="text-danger"></span>
-        </div>*@
-
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">@Localizer["flightAdd"]</button>
     </form>
 </div>

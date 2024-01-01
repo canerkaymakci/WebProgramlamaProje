@@ -1,9 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <data name="welcomeMessage" xml:space="preserve">
-    <value>Welcome!</value>
+  <data name="activeTickets" xml:space="preserve">
+    <value>Active Tickets</value>
   </data>
-  <data name="buttonText" xml:space="preserve">
-    <value>OK</value>
+  <data name="ticketId" xml:space="preserve">
+    <value>Ticket ID</value>
+  </data>
+  <data name="ticketType" xml:space="preserve">
+    <value>Ticket Type</value>
+  </data>
+  <data name="ticketFrom" xml:space="preserve">
+    <value>From:</value>
+  </data>
+  <data name="ticketTo" xml:space="preserve">
+    <value>To:</value>
+  </data>
+  <data name="ticketSeat" xml:space="preserve">
+    <value>Seat No:</value>
+  </data>
+  <data name="ticketDate" xml:space="preserve">
+    <value>Date:</value>
+  </data>
+  <data name="ticketOwner" xml:space="preserve">
+    <value>Ticket Owner:</value>
   </data>
 </root>

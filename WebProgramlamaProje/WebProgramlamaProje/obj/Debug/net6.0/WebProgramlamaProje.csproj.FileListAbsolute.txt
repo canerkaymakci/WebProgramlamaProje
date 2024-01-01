@@ -328,3 +328,7 @@
 /Users/canerkaymakci/Documents/GitHub/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje/obj/Debug/net6.0/WebProgramlamaProje.pdb
 /Users/canerkaymakci/Documents/GitHub/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje/obj/Debug/net6.0/WebProgramlamaProje.genruntimeconfig.cache
 /Users/canerkaymakci/Documents/GitHub/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje/obj/Debug/net6.0/ref/WebProgramlamaProje.dll
+/Users/canerkaymakci/Documents/GitHub/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje/obj/Debug/net6.0/WebProgramlamaProje.Resources.Controllers.DashboardController.en-US.resources
+/Users/canerkaymakci/Documents/GitHub/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje/obj/Debug/net6.0/WebProgramlamaProje.Resources.Controllers.DashboardController.tr-TR.resources
+/Users/canerkaymakci/Documents/GitHub/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje/obj/Debug/net6.0/WebProgramlamaProje.Resources.Controllers.AdminController.en-US.resources
+/Users/canerkaymakci/Documents/GitHub/WebProgramlamaProje/WebProgramlamaProje/WebProgramlamaProje/obj/Debug/net6.0/WebProgramlamaProje.Resources.Controllers.AdminController.tr-TR.resources

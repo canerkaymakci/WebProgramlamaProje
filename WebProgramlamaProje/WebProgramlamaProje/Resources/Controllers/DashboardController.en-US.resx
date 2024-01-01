@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="flightInfo" xml:space="preserve">
+    <value>Active Flight</value>
+  </data>
+  <data name="flightFrom" xml:space="preserve">
+    <value>From:</value>
+  </data>
+  <data name="flightTo" xml:space="preserve">
+    <value>To:</value>
+  </data>
+  <data name="flightTotalSeat" xml:space="preserve">
+    <value>Total Seat Count:</value>
+  </data>
+  <data name="flightDate" xml:space="preserve">
+    <value>Date:</value>
+  </data>
+  <data name="flightDescription" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="flightReserve" xml:space="preserve">
+    <value>Reserve</value>
+  </data>
+</root>

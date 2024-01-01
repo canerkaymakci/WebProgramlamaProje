@@ -9,6 +9,19 @@
     }
 }
 
+<style>
+    .seat-box {
+        border: 1px solid #ccc;
+        padding: 5px;
+        margin: 5px;
+        text-align: center;
+    }
+
+    .seat-number {
+        margin-top: 5px;
+    }
+</style>
+
 <div class="container">
     <h2>Flight Details</h2>
     <dl class="row">
@@ -26,57 +39,48 @@
 
         <dt class="col-sm-3">Total Seat Count</dt>
         <dd class="col-sm-9">@Model.TotalSeatCount</dd>
-
-
     </dl>
 
     <div class="row">
         <div class="col-md-6">
             <form id="myForm">
-                <div class=" form-group">
+                <div class="form-group">
                     <input type="hidden" id="FlightId" name="FlightId" value="@Model.Id" />
                 </div>
-                <div class="radio-buttons">
-                    @foreach (var ticketType in Model.TicketTypes)
+
+                <div class="seat-map">
+                    @for (int i = 1; i <= Model.TotalSeatCount; i++)
                     {
-                        <label class="radio-container">
-                            <input type="radio" name="TicketTypeId" value="@ticketType.Id" />
-                            <dl class="row">
-                                <dt class="col-sm-3">Name</dt>
-                                <dd class="col-sm-9">@ticketType.Name</dd>
+                        <div class="col-md-2">
+                            <div class="seat-box">
+                                <input class="form-check-input" type="checkbox" name="seatNo" id="seat_@i" value="@i" @(isSeatOccupied(i) ? "disabled" : "") />
+                                <label class="form-check-label" for="seat_@i">
+                                    <div class="seat-number">@i</div>
+                                </label>
+                            </div>
+                        </div>
 
-                                <dt class="col-sm-3">Price</dt>
-                                <dd class="col-sm-9">@ticketType.Price</dd>
-
-                                <dt class="col-sm-3">Currency</dt>
-                                <dd class="col-sm-9">@ticketType.Currency</dd>
-
-                                <dt class="col-sm-3">Property</dt>
-                                <dd class="col-sm-9">@ticketType.Properties</dd>
-
-
-                            </dl>
-                        </label>
+                        @if (i % 6 == 0)
+                        {
+                            <div class="w-100"></div>
+                        }
                     }
-
                 </div>
 
+                <div class="form-group">
+                    <label for="TicketTypeId">Ticket Type:</label>
+                    <select class="form-control" id="TicketTypeId" name="TicketTypeId">
+                        @foreach (var ticketType in Model.TicketTypes)
+                        {
+                            <option value="@ticketType.Id">@ticketType.Name - Price: @ticketType.Price @ticketType.Currency</option>
+                        }
+                    </select>
+                </div>
 
-                @for (int i = 1; i < Model.TotalSeatCount; i++)
-                {
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="seatNo" id="seat_@i" value="@i" @(isSeatOccupied(i) ? "disabled" : "") />
-                        <label class="form-check-label" for="seat_@i">
-                            seat_@i
-                        </label>
-                    </div>
-                }
-                <button type="button" id="submitButton">Reserve</button>
-
+                <button type="button" id="submitButton" class="btn btn-primary">Reserve</button>
             </form>
         </div>
     </div>
-
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -84,8 +88,6 @@
     $(document).ready(function () {
         $('#submitButton').click(function () {
             var formData = $('#myForm').serialize();
-            //var data = new FormData(formData);
-            //console.log(data);
             $.ajax({
                 type: 'post',
                 url: '@Url.Action("ReserveSeat","Dashboard")',
@@ -94,20 +96,17 @@
                     console.log(response);
                     if (response.status) {
                         showNotification('success', "İşlem Başarılı");
-                        toastr.success("test");
-                        //setTimeout(location.reload(),10000)
+                        location.reload();
                     }
                     else {
                         showNotification('error', "İşlem Başarısız");
                     }
-
-               
                 },
                 error: function (response) {
                     console.log(response);
                     showNotification('error', "İşlem Başarısız");
                 }
-            })
-        })
-    })
+            });
+        });
+    });
 </script>

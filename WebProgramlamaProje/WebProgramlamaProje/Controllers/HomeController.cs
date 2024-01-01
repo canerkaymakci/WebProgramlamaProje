@@ -1,6 +1,8 @@
-﻿using System.Diagnostics;
+﻿using System.Data;
+using System.Diagnostics;
 using System.Globalization;
 using System.Net;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Localization;
 using Microsoft.Extensions.Localization;
@@ -19,41 +21,36 @@ public class HomeController : BaseController
 
     public HomeController(IStringLocalizer<BaseController> baseLocalizer,
         IStringLocalizer<HomeController> localizer,
-        IHttpContextAccessor httpContextAccessor) :base(baseLocalizer)
+        IHttpContextAccessor httpContextAccessor) :base(baseLocalizer, httpContextAccessor)
     {
         var selectedCulture = httpContextAccessor.HttpContext.Request.Cookies["SelectedCulture"];
 
-        // Eğer dil bilgisi varsa, onu kullan, yoksa varsayılan bir dil kullan
         var cultureInfo = selectedCulture != null ? new CultureInfo(selectedCulture) : CultureInfo.CurrentCulture;
 
-        System.Threading.Thread.CurrentThread.CurrentCulture = cultureInfo;
-        System.Threading.Thread.CurrentThread.CurrentUICulture = cultureInfo;
+        //System.Threading.Thread.CurrentThread.CurrentCulture = cultureInfo;
+        //System.Threading.Thread.CurrentThread.CurrentUICulture = cultureInfo;
 
-        httpContextAccessor.HttpContext.Response.Headers.Add("Cache-Control", "no-cache, no-store, must-revalidate");
-        httpContextAccessor.HttpContext.Response.Headers.Add("Pragma", "no-cache");
-        httpContextAccessor.HttpContext.Response.Headers.Add("Expires", "0");
+        ////httpContextAccessor.HttpContext.Response.Headers.Add("Cache-Control", "no-cache, no-store, must-revalidate");
+        ////httpContextAccessor.HttpContext.Response.Headers.Add("Pragma", "no-cache");
+        ////httpContextAccessor.HttpContext.Response.Headers.Add("Expires", "0");
 
-        ViewData["CurrentCulture"] = cultureInfo.Name;
+        //ViewData["CurrentCulture"] = cultureInfo.Name;
 
         _localizer = localizer;
     }
 
-    //public HomeController(ILogger<HomeController> logger, IViewLocalizer viewLocalizer) :base(viewLocalizer)
-    //{
-    //    _logger = logger;
-    //}
+    
 
     
     public async Task<IActionResult> Index()
     {
-        var x = _localizer["welcomeMessage"];
+        var x = _localizer["activeTickets"];
 
         var client = new RestClient("https://localhost:7172");
 
-        // RestSharp request oluştur
         var request = new RestRequest("Ticket/GetTickets", Method.Post);
 
-        // İstek body'sine parametreleri ekle
+
         request.AddJsonBody(new
         {
             UserName = User.Identity.Name
@@ -61,29 +58,23 @@ public class HomeController : BaseController
 
         try
         {
-            // İstek gönder
             var response = await client.ExecuteAsync(request);
 
-            // Yanıtı işle
             if (response.StatusCode == HttpStatusCode.OK)
             {
-                // Başarılı yanıt, JSON'dan sonuçları al
                 var result = response.Content;
 
                 var mappingResult = JsonConvert.DeserializeObject<List<Ticket>>(result);
 
-                // Sonucu işleme devam et
                 return View(mappingResult);
             }
             else
             {
-                // Başarısız yanıt, hata durumunu işle
                 return StatusCode((int)response.StatusCode, response.StatusDescription);
             }
         }
         catch (Exception ex)
         {
-            // Hata durumunda isteği işle
             return BadRequest(ex.Message);
         }
 
@@ -100,11 +91,9 @@ public class HomeController : BaseController
             System.Threading.Thread.CurrentThread.CurrentCulture = cultureInfo;
             System.Threading.Thread.CurrentThread.CurrentUICulture = cultureInfo;
 
-            // Kullanıcının tercih ettiği dili bir cookie içine kaydet
             Response.Cookies.Append("SelectedCulture", culture);
         }
 
-        // Dil değişikliği sonrasında tekrar anasayfaya yönlendir
         return RedirectToAction("Index");
     }
 
@@ -122,6 +111,6 @@ public class HomeController : BaseController
     }
 
 
-    ///TODO Authorizations, Localizations, Frontend, SeedData Users
+    ///TODO Localizations, Frontend, SeedData Users
 }
 

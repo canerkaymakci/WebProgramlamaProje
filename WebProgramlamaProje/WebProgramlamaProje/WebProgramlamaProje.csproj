@@ -17,8 +17,8 @@
     <None Remove="Views\Admin\" />
     <None Remove="Models\Dto\Admin\" />
     <None Remove="Resources\Controllers\" />
-    <None Remove="Resources\Controllers\HomeController\" />
     <None Remove="Extensions\" />
+    <None Remove="Migrations\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\Domain\" />
@@ -31,8 +31,8 @@
     <Folder Include="Views\Admin\" />
     <Folder Include="Models\Dto\Admin\" />
     <Folder Include="Resources\Controllers\" />
-    <Folder Include="Resources\Controllers\HomeController\" />
     <Folder Include="Extensions\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.4.4" />

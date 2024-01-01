@@ -1,48 +1,59 @@
 ﻿@model WebProgramlamaProje.Models.Domain.Flight;
 
+@inject IStringLocalizer<AdminController> Localizer
+@inject IHttpContextAccessor HttpContextAccessor
+@using Microsoft.AspNetCore.Localization
+
+@{
+
+
+    var currentCulture = HttpContextAccessor.HttpContext?.Features.Get<IRequestCultureFeature>()?.RequestCulture?.Culture;
+}
+
+
 <div class="container mt-5">
-    <h2>Flight Details</h2>
+    <h2>@Localizer["flightDetails"]</h2>
     <dl class="row">
-        <dt class="col-sm-3">From</dt>
+        <dt class="col-sm-3">@Localizer["flightFrom"]</dt>
         <dd class="col-sm-9">@Model.From</dd>
 
-        <dt class="col-sm-3">To</dt>
+        <dt class="col-sm-3">@Localizer["flightTo"]</dt>
         <dd class="col-sm-9">@Model.To</dd>
 
-        <dt class="col-sm-3">Date</dt>
+        <dt class="col-sm-3">@Localizer["flightDate"]</dt>
         <dd class="col-sm-9">@Model.Date</dd>
 
-        <dt class="col-sm-3">Description</dt>
+        <dt class="col-sm-3">@Localizer["flightDescription"]</dt>
         <dd class="col-sm-9">@Model.Description</dd>
 
-        <dt class="col-sm-3">Total Seat Count</dt>
+        <dt class="col-sm-3">@Localizer["flightTotalSeat"]</dt>
         <dd class="col-sm-9">@Model.TotalSeatCount</dd>
 
 
     </dl>
-    <h2>Ticket Types</h2>
-    <a asp-controller="Admin" asp-action="AddTicketType" asp-route-id="@Model.Id" class="btn btn-primary">Add TicketType</a>
+    <h2>@Localizer["ticketTypes"]</h2>
+    <a asp-controller="Admin" asp-action="AddTicketType" asp-route-id="@Model.Id" class="btn btn-primary">@Localizer["addTicketType"]</a>
     @foreach (var ticketType in Model.TicketTypes)
     {
         <dl class="row">
-            <dt class="col-sm-3">Name</dt>
+            <dt class="col-sm-3">@Localizer["ticketType"]</dt>
             <dd class="col-sm-9">@ticketType.Name</dd>
 
-            <dt class="col-sm-3">Price</dt>
+            <dt class="col-sm-3">@Localizer["ticketPrice"]</dt>
             <dd class="col-sm-9">@ticketType.Price</dd>
 
-            <dt class="col-sm-3">Currency</dt>
+            <dt class="col-sm-3">@Localizer["ticketCurrency"]</dt>
             <dd class="col-sm-9">@ticketType.Currency</dd>
 
-            <dt class="col-sm-3">Property</dt>
+            <dt class="col-sm-3">@Localizer["ticketFeatures"]</dt>
             <dd class="col-sm-9">@ticketType.Properties</dd>
 
             <form method="post" asp-route-id="@ticketType.Id" asp-controller="Admin" asp-action="DeleteTicketType">
-                <button type="submit">Delete TicketType</button>
+                <button type="submit">@Localizer["removeTicketType"]</button>
 
             </form>
 
-            <a asp-controller="Admin" asp-action="UpdateTicketType" asp-route-id="@ticketType.Id" class="btn btn-primary">Update TicketType</a>
+            <a asp-controller="Admin" asp-action="UpdateTicketType" asp-route-id="@ticketType.Id" class="btn btn-primary">@Localizer["updateTicketType"]</a>
 
 
         </dl>

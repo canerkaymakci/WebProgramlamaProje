@@ -1,9 +1,7 @@
 ﻿<Properties StartupConfiguration="Birden Çok Proje">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.WebProgramlamaProje PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.ItemProperties.WebProgramlamaProjeAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="Birden Çok Proje" Name="Birden Çok Proje">
       <Items>
@@ -12,62 +10,77 @@
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WebProgramlamaProje/Controllers/HomeController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebProgramlamaProje/appsettings.json">
     <Files>
-      <File FileName="WebProgramlamaProje/Program.cs" Line="75" Column="32" />
-      <File FileName="WebProgramlamaProje/Views/Shared/_Layout.cshtml" Line="48" Column="66" />
-      <File FileName="WebProgramlamaProje/Views/Home/Index.cshtml" Line="1" Column="1" />
-      <File FileName="WebProgramlamaProje/Views/_ViewImports.cshtml" />
-      <File FileName="WebProgramlamaProje/Controllers/BaseController.cs" Line="24" Column="6" />
-      <File FileName="WebProgramlamaProje/Controllers/AdminController.cs" Line="15" Column="32" />
-      <File FileName="WebProgramlamaProje/Controllers/DashboardController.cs" Line="1" Column="1" />
-      <File FileName="WebProgramlamaProje/Controllers/HomeController.cs" Line="125" Column="68" />
-      <File FileName="WebProgramlamaProjeAPI/Repositories/TicketService.cs" />
-      <File FileName="WebProgramlamaProje/SeedData.cs" Line="13" Column="50" />
-      <File FileName="WebProgramlamaProjeAPI/Program.cs" />
-      <File FileName="WebProgramlamaProje/Resources/Controllers/BaseController.en-US.resx" Line="1" Column="1" />
-      <File FileName="WebProgramlamaProje/Resources/Controllers/BaseController.tr-TR.resx" Line="1" Column="1" />
-      <File FileName="WebProgramlamaProje/Models/Domain/Ticket.cs" Line="1" Column="1" />
-      <File FileName="WebProgramlamaProje/Repository/Abstract/ITicketService.cs" Line="1" Column="1" />
-      <File FileName="WebProgramlamaProje/Repository/Implementation/TicketService.cs" Line="1" Column="1" />
-      <File FileName="WebProgramlamaProje/Repository/Implementation/TicketTypeService.cs" Line="7" Column="40" />
+      <File FileName="WebProgramlamaProje/Controllers/HomeController.cs" Line="26" Column="9" />
+      <File FileName="WebProgramlamaProje/Controllers/AdminController.cs" Line="36" Column="13" />
+      <File FileName="WebProgramlamaProje/Resources/Controllers/AdminController.en-US.resx" Line="3" Column="3" />
+      <File FileName="WebProgramlamaProje/Resources/Controllers/AdminController.tr-TR.resx" Line="3" Column="3" />
+      <File FileName="WebProgramlamaProje/Views/Admin/Index.cshtml" Line="18" Column="52" />
+      <File FileName="WebProgramlamaProje/Views/Dashboard/Index.cshtml" Line="1" Column="30" />
+      <File FileName="WebProgramlamaProje/Views/Admin/FlightDetails.cshtml" Line="15" Column="41" />
+      <File FileName="WebProgramlamaProje/Views/Admin/UpdateTicketType.cshtml" Line="45" Column="79" />
+      <File FileName="WebProgramlamaProje/Views/Admin/CreateFlight.cshtml" Line="45" Column="15" />
+      <File FileName="WebProgramlamaProje/Views/Admin/AddTicketType.cshtml" Line="3" Column="1" />
+      <File FileName="WebProgramlamaProje/Resources/Controllers/HomeController.en-US.resx" Line="3" Column="3" />
+      <File FileName="WebProgramlamaProje/Resources/Controllers/HomeController.tr-TR.resx" Line="3" Column="3" />
+      <File FileName="WebProgramlamaProje/Repository/Implementation/TicketTypeService.cs" Line="1" Column="1" />
       <File FileName="WebProgramlamaProje/Repository/Abstract/ITicketTypeService.cs" Line="1" Column="1" />
+      <File FileName="WebProgramlamaProje/Repository/Abstract/ITicketService.cs" Line="1" Column="1" />
       <File FileName="WebProgramlamaProje/Repository/Abstract/IFlightService.cs" Line="1" Column="1" />
-      <File FileName="WebProgramlamaProje/Repository/Abstract/IUserAuthenticationService.cs" Line="1" Column="1" />
+      <File FileName="WebProgramlamaProje/Repository/Implementation/TicketService.cs" Line="1" Column="1" />
+      <File FileName="WebProgramlamaProje/Repository/Implementation/FlightService.cs" Line="1" Column="1" />
       <File FileName="WebProgramlamaProje/Repository/BaseRepository.cs" Line="1" Column="1" />
-      <File FileName="WebProgramlamaProje/Models/Domain/TicketType.cs" Line="1" Column="1" />
-      <File FileName="WebProgramlamaProje/Models/BaseEntity.cs" Line="1" Column="1" />
-      <File FileName="WebProgramlamaProje/Models/Dto/Admin/TicketTypeCreateRequest.cs" Line="1" Column="1" />
-      <File FileName="WebProgramlamaProje/Resources/Controllers/HomeController.en-US.resx" Line="1" Column="1" />
-      <File FileName="WebProgramlamaProje/Resources/Controllers/HomeController.tr-TR.resx" Line="3" Column="29" />
-      <File FileName="WebProgramlamaProje/Extensions/RequestLocalizationCookiesMiddleware.cs" Line="27" Column="33" />
+      <File FileName="WebProgramlamaProje/Models/IBaseEntity.cs" Line="1" Column="1" />
+      <File FileName="WebProgramlamaProje/Models/Domain/Flight.cs" Line="1" Column="1" />
+      <File FileName="WebProgramlamaProje/Controllers/BaseController.cs" Line="26" Column="70" />
+      <File FileName="WebProgramlamaProje/Controllers/DashboardController.cs" Line="35" Column="13" />
+      <File FileName="WebProgramlamaProje/Program.cs" Line="1" Column="1" />
+      <File FileName="WebProgramlamaProje/Views/Home/Index.cshtml" Line="2" Column="30" />
+      <File FileName="WebProgramlamaProje/Resources/Controllers/BaseController.en-US.resx" Line="108" Column="3" />
+      <File FileName="WebProgramlamaProje/Resources/Controllers/DashboardController.en-US.resx" Line="3" Column="3" />
+      <File FileName="WebProgramlamaProje/Resources/Controllers/BaseController.tr-TR.resx" Line="121" Column="21" />
+      <File FileName="WebProgramlamaProje/Resources/Controllers/DashboardController.tr-TR.resx" Line="3" Column="3" />
+      <File FileName="WebProgramlamaProje/Models/Domain/ApplicationDbContext.cs" Line="1" Column="1" />
+      <File FileName="WebProgramlamaProje/Models/Domain/ApplicationUser.cs" Line="1" Column="1" />
+      <File FileName="WebProgramlamaProje/Models/Dto/RegistrationDto.cs" Line="1" Column="1" />
+      <File FileName="WebProgramlamaProje/Models/Dto/StatusDto.cs" Line="1" Column="1" />
+      <File FileName="WebProgramlamaProje/Models/Dto/LoginDto.cs" Line="1" Column="1" />
+      <File FileName="WebProgramlamaProje/SeedData.cs" Line="29" Column="35" />
+      <File FileName="WebProgramlamaProje/Views/Shared/_Layout.cshtml" Line="83" Column="83" />
+      <File FileName="WebProgramlamaProjeAPI/Controllers/TicketController.cs" Line="1" Column="1" />
+      <File FileName="WebProgramlamaProjeAPI/Controllers/WeatherForecastController.cs" Line="1" Column="1" />
+      <File FileName="WebProgramlamaProjeAPI/Program.cs" Line="30" Column="45" />
+      <File FileName="WebProgramlamaProjeAPI/Domain/ApplicationDbContext.cs" Line="1" Column="1" />
+      <File FileName="WebProgramlamaProjeAPI/Domain/ApplicationUser.cs" Line="1" Column="1" />
+      <File FileName="WebProgramlamaProjeAPI/Domain/BaseEntity.cs" Line="1" Column="1" />
+      <File FileName="WebProgramlamaProjeAPI/Domain/Flight.cs" Line="1" Column="1" />
+      <File FileName="WebProgramlamaProjeAPI/Domain/IBaseEntity.cs" Line="1" Column="1" />
+      <File FileName="WebProgramlamaProjeAPI/Domain/Ticket.cs" Line="1" Column="1" />
+      <File FileName="WebProgramlamaProjeAPI/Domain/TicketType.cs" Line="1" Column="1" />
+      <File FileName="WebProgramlamaProjeAPI/Dto/GetTicketRequest.cs" Line="1" Column="1" />
+      <File FileName="WebProgramlamaProjeAPI/Properties/launchSettings.json" Line="24" Column="29" />
+      <File FileName="WebProgramlamaProje/Views/UserAuthentication/Login.cshtml" Line="76" Column="81" />
+      <File FileName="WebProgramlamaProje/Views/UserAuthentication/Registration.cshtml" Line="54" Column="27" />
+      <File FileName="WebProgramlamaProje/appsettings.json" Line="9" Column="86" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="WebProgramlamaProje" expanded="True">
             <Node name="WebProgramlamaProje" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="HomeController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Extensions" expanded="True" />
+              <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True">
-                <Node name="Domain" expanded="True" />
-                <Node name="Dto" expanded="True">
-                  <Node name="Admin" expanded="True" />
-                </Node>
-              </Node>
-              <Node name="Repository" expanded="True">
-                <Node name="Abstract" expanded="True" />
-                <Node name="Implementation" expanded="True" />
-              </Node>
-              <Node name="Resources" expanded="True">
-                <Node name="Controllers" expanded="True" />
+                <Node name="Dto" expanded="True" />
               </Node>
               <Node name="Views" expanded="True">
+                <Node name="Admin" expanded="True" />
+                <Node name="Dashboard" expanded="True" />
                 <Node name="Home" expanded="True" />
                 <Node name="Shared" expanded="True" />
+                <Node name="UserAuthentication" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -75,5 +88,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.WebProgramlamaProjeAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
 </Properties>

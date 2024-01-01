@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<WebProgramlamaProje.Models.Domain.Ticket>
-@inject IStringLocalizer<HomeController> Localizer
+@inject IStringLocalizer<BaseController> Localizer
 @inject IHttpContextAccessor HttpContextAccessor
 @using Microsoft.AspNetCore.Localization
 
@@ -11,19 +11,19 @@
 
 
 <div class="text-center">
-    <h1 class="display-4">@Localizer["welcomeMessage"]</h1>
+    <h1 class="display-4">@Localizer["activeTickets"]</h1>
 </div>
 
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th>Id</th>
-            <th>TicketType</th>
-            <th>From</th>
-            <th>To</th>
-            <th>SeatNo</th>
-            <th>Date</th>
-            <th>UserName</th>
+            <th>@Localizer["ticketId"]</th>
+            <th>@Localizer["ticketType"]</th>
+            <th>@Localizer["ticketFrom"]</th>
+            <th>@Localizer["ticketTo"]</th>
+            <th>@Localizer["ticketSeat"]</th>
+            <th>@Localizer["ticketDate"]</th>
+            <th>@Localizer["ticketOwner"]</th>
         </tr>
     </thead>
     <tbody>

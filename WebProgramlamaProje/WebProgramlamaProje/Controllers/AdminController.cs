@@ -7,21 +7,42 @@ using WebProgramlamaProje.Models.Domain;
 using WebProgramlamaProje.Repository.Abstract;
 using WebProgramlamaProje.Models.Dto.Admin;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Localization;
+using System.Globalization;
 
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace WebProgramlamaProje.Controllers
 {
     [Authorize(Roles ="Admin")]
-    public class AdminController : Controller
+    public class AdminController : BaseController
     {
+        private readonly ILogger<AdminController> _logger;
+        private readonly IStringLocalizer<AdminController> _localizer;
+
         private readonly IFlightService? _flightService;
         private readonly ITicketTypeService? _ticketTypeService;
 
-        public AdminController(IFlightService? flightService, ITicketTypeService? ticketTypeService)
+        public AdminController(IFlightService? flightService, ITicketTypeService? ticketTypeService, IStringLocalizer<BaseController> baseLocalizer,
+        IStringLocalizer<AdminController> localizer,
+        IHttpContextAccessor httpContextAccessor) : base(baseLocalizer, httpContextAccessor)
         {
             _flightService = flightService;
             _ticketTypeService = ticketTypeService;
+
+            var selectedCulture = httpContextAccessor.HttpContext.Request.Cookies["SelectedCulture"];
+
+            var cultureInfo = selectedCulture != null ? new CultureInfo(selectedCulture) : CultureInfo.CurrentCulture;
+
+            //System.Threading.Thread.CurrentThread.CurrentCulture = cultureInfo;
+            //System.Threading.Thread.CurrentThread.CurrentUICulture = cultureInfo;
+
+            ////httpContextAccessor.HttpContext.Response.Headers.Add("Cache-Control", "no-cache, no-store, must-revalidate");
+            ////httpContextAccessor.HttpContext.Response.Headers.Add("Pragma", "no-cache");
+            ////httpContextAccessor.HttpContext.Response.Headers.Add("Expires", "0");
+
+            //ViewData["CurrentCulture"] = cultureInfo.Name;
+
+            _localizer = localizer;
         }
 
         // GET: /<controller>/
@@ -95,6 +116,21 @@ namespace WebProgramlamaProje.Controllers
 
             var result = await _ticketTypeService.UpdateAsync(model);
             return RedirectToAction(nameof(FlightDetails), new { Id = model.FlightId });
+        }
+
+        [HttpPost]
+        public IActionResult ChangeCulture(string culture)
+        {
+            if (!string.IsNullOrEmpty(culture))
+            {
+                var cultureInfo = new CultureInfo(culture);
+                System.Threading.Thread.CurrentThread.CurrentCulture = cultureInfo;
+                System.Threading.Thread.CurrentThread.CurrentUICulture = cultureInfo;
+
+                Response.Cookies.Append("SelectedCulture", culture);
+            }
+
+            return RedirectToAction("Index");
         }
 
 

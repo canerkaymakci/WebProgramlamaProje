@@ -1,9 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <data name="welcomeMessage" xml:space="preserve">
-    <value>Hoş geldiniz!</value>
+  <data name="activeTickets" xml:space="preserve">
+    <value>Aktif Biletler</value>
   </data>
-  <data name="buttonText" xml:space="preserve">
-    <value>Tamam</value>
+  <data name="ticketId" xml:space="preserve">
+    <value>Bilet Numarası:</value>
+  </data>
+  <data name="ticketType" xml:space="preserve">
+    <value>Bilet Türü:</value>
+  </data>
+  <data name="ticketFrom" xml:space="preserve">
+    <value>Kalkış:</value>
+  </data>
+  <data name="ticketTo" xml:space="preserve">
+    <value>Varış:</value>
+  </data>
+  <data name="ticketSeat" xml:space="preserve">
+    <value>Koltuk Numarası:</value>
+  </data>
+  <data name="ticketDate" xml:space="preserve">
+    <value>Tarih:</value>
+  </data>
+  <data name="ticketOwner" xml:space="preserve">
+    <value>Bilet Sahibi:</value>
   </data>
 </root>

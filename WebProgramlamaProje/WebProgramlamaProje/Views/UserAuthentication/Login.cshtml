@@ -8,15 +8,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Login</title>
 
     <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
 
         form {
-            border: 3px solid #f1f1f1;
-            width: 60%;
-            margin: auto;
-            margin-top: 10%;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
         }
 
         input[type=text], input[type=password] {
@@ -34,6 +42,7 @@
             padding: 14px 20px;
             margin: 8px 0;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
             width: 100%;
         }
@@ -46,40 +55,42 @@
             padding: 0px;
         }
 
-
         .err {
             color: red;
         }
-    </style>
 
+        a {
+            text-decoration: none;
+            color: #aa048b;
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
 
     <form asp-action="Login" method="post">
-
         <div class="container">
-            <label asp-for="Username"><b>Username</b></label>
-            <input type="text" asp-for="Username" placeholder="Enter Username">
+            <label asp-for="Username"><b>Kullanıcı Adı</b></label>
+            <input type="text" asp-for="Username" placeholder="Kullanıcı Adınız.">
             <div class="msg">
                 <span class="err" asp-validation-for="Username"></span>
             </div>
 
-
-
-            <label asp-for="Password"><b>Password</b></label>
-            <input type="password" asp-for="Password" placeholder="Enter Password">
+            <label asp-for="Password"><b>Şifre</b></label>
+            <input type="password" asp-for="Password" placeholder="Şifreniz.">
             <div class="msg">
                 <span asp-validation-for="Password" class="err"></span>
             </div>
-
 
             @if (TempData["AlertMessage"] != null)
             {
                 <div class="msg">@TempData["AlertMessage"]</div>
             }
 
-            <button type="submit">Login</button>
-            <a class="text-alert" href="/UserAuthentication/Registration">Not a user? Signup</a>
+            <button type="submit">Giriş Yap</button>
+            <a href="/UserAuthentication/Registration">Hesabın Yok Mu?</a>
         </div>
     </form>
 

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="flightInfo" xml:space="preserve">
+    <value>Aktif Uçuş</value>
+  </data>
+  <data name="flightFrom" xml:space="preserve">
+    <value>Kalkış:</value>
+  </data>
+  <data name="flightTo" xml:space="preserve">
+    <value>Varış:</value>
+  </data>
+  <data name="flightTotalSeat" xml:space="preserve">
+    <value>Uçuştaki Koltuk Sayısı:</value>
+  </data>
+  <data name="flightDate" xml:space="preserve">
+    <value>Tarih:</value>
+  </data>
+  <data name="flightDescription" xml:space="preserve">
+    <value>Açıklama:</value>
+  </data>
+  <data name="flightReserve" xml:space="preserve">
+    <value>Rezerve Et</value>
+  </data>
+</root>
